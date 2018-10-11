@@ -10,7 +10,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-    <title>Theodore CIT 261</title>
+    <title>(topic)</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,26 +20,34 @@
 
   </head>
  <body>
- 	<div id="nav-placeholder"></div>
+ 	
 
         <script>
-        //Load Navigation from HTML
+        //Load Navigation and footer from HTML
         window.onload = function(){
             $.get("nav.html", function(data){
                 $("#nav-placeholder").html(data);
             })
-        }
-     
-     //Load Footer from HTML
-        window.onload = function(){
             $.get("foot.html", function(data1){
-                $("#foot").html(data1);
+                $("#foot-placeholder").html(data1);
             })
         }
-     </script>
+        </script>
+
+    <!--Nav placeholder-->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Content -->
+    <div class="container">
+    	<h1 class="my-4">(topic)
+        	<small></small>
+      	</h1>
 
 
-     <div id="foot"></div>
+    </div>
+
+    <!--footer placeholder-->
+    <div id="foot"></div>
 
 
 </body>

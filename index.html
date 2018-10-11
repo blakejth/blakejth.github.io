@@ -22,20 +22,20 @@
 
 
   <body>
-    
-
+        
         <script>
-        //Load Navigation from HTML
+        //Load Navigation and footer from HTML
         window.onload = function(){
             $.get("nav.html", function(data){
                 $("#nav-placeholder").html(data);
             })
             $.get("foot.html", function(data1){
-                $("#footer").html(data1);
+                $("#foot-placeholder").html(data1);
             })
         }
         </script>
 
+    <!--Nav placeholder-->
     <div id="nav-placeholder"> </div>
 
     <!-- Page Content -->
@@ -136,7 +136,8 @@
     </div>
     <!-- /.container -->
 
-    <div id="footer"></div>
+    <!--footer placeholder-->
+    <div id="foot-placeholder"></div>
 
 
     <!-- Bootstrap core JavaScript -->
