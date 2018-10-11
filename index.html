@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-<script>
-$.get("navigation.html", function(data){
-    $("#nav-placeholder").replaceWith(data);
-});
-</script>
-
 <div id="nav-placeholder">
 
     <!-- Page Content -->
     <div class="container">
+
+      <script>
+        window.onload = function(){
+            $.get("nav.html", function(data){
+                $("#nav-placeholder").html(data);
+            })
+        }
+     </script>
 
       <!-- Introduction Row -->
       <h1 class="my-4">CIT 261
@@ -25,7 +27,7 @@ $.get("navigation.html", function(data){
         </div>
 
         <div class="col-lg-4 col-sm-6 text-center mb-4">
-          <a href="test.html">
+          <a href="">
           <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt=""> </a>
           <p>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</p>
         </div>
