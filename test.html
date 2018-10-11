@@ -22,16 +22,24 @@
  <body>
  	<div id="nav-placeholder"></div>
 
-<script>
-window.onload = function(){
+        <script>
+        //Load Navigation from HTML
+        window.onload = function(){
             $.get("nav.html", function(data){
                 $("#nav-placeholder").html(data);
             })
         }
-</script>
+     
+     //Load Footer from HTML
+        window.onload = function(){
+            $.get("foot.html", function(data){
+                $("#foot").html(data);
+            })
+        }
+     </script>
 
 
-
+     <div id="foot"></div>
 
 
 </body>

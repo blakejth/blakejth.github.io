@@ -24,10 +24,18 @@
   <body>
     <div id="nav-placeholder"> </div>
 
-      <script>
+        <script>
+        //Load Navigation from HTML
         window.onload = function(){
             $.get("nav.html", function(data){
                 $("#nav-placeholder").html(data);
+            })
+        }
+     
+     //Load Footer from HTML
+        window.onload = function(){
+            $.get("foot.html", function(data){
+                $("#foot").html(data);
             })
         }
      </script>
@@ -130,13 +138,8 @@
     </div>
     <!-- /.container -->
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">No copyright here! Take what you want!</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+    <div id="footer"></div>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
