@@ -31,7 +31,9 @@
                 $("#nav-placeholder").html(data);
             })
         }
-     
+        </script>
+
+        <script>
      //Load Footer from HTML
         window.onload = function(){
             $.get("foot.html", function(data){
@@ -139,6 +141,15 @@
     <!-- /.container -->
 
     <div id="foot"></div>
+    
+    <script>
+     //Load Footer from HTML
+        window.onload = function(){
+            $.get("foot.html", function(data){
+                $("#foot").html(data);
+            })
+        }
+     </script>
 
 
     <!-- Bootstrap core JavaScript -->
