@@ -30,17 +30,12 @@
             $.get("nav.html", function(data){
                 $("#nav-placeholder").html(data);
             })
+            $.get("foot.html", function(data1){
+                $("#footer").html(data1);
+            })
         }
         </script>
 
-        <script>
-     //Load Footer from HTML
-        window.onload = function(){
-            $.get("foot.html", function(data){
-                $("#foot").html(data);
-            })
-        }
-     </script>
 
     <!-- Page Content -->
     <div class="container">
@@ -140,16 +135,7 @@
     </div>
     <!-- /.container -->
 
-    <div id="foot"></div>
-
-    <script>
-     //Load Footer from HTML
-        window.onload = function(){
-            $.get("foot.html", function(data1){
-                $("#foot").html(data1);
-            })
-        }
-     </script>
+    <div id="footer"></div>
 
 
     <!-- Bootstrap core JavaScript -->
