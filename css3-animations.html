@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="My CIT 261 Class content" content="">
+    <meta name="Theodore Hancock" content="">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <title>(topic)</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/round-about.css" rel="stylesheet">
+
+  </head>
+ <body>
+ 	
+        <script>
+        //Load Navigation and footer from HTML
+        window.onload = function(){
+            $.get("nav.html", function(data){
+                $("#nav-placeholder").html(data);
+            })
+            $.get("foot.html", function(data1){
+                $("#foot-placeholder").html(data1);
+            })
+        }
+        </script>
+
+    <!--Nav placeholder-->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Content -->
+    <div class="container">
+    	<h1 class="my-4">Designing, Defining, and Triggering CSS3 Animations without Custom Libraries
+        	<small></small>
+      	</h1>
+        <style type="text/css">
+            .btn-med {
+              height:100px;
+              width:100px;
+              background-color: rgb(225,225,225);
+              border-radius: 20px;
+              position: relative;
+              left: 45%;
+              top: 200px;
+              
+            }
+            .animation:hover {
+                
+                -webkit-animation: bounce 1s infinite; /* Chrome, Safari, Opera */ 
+                animation: bounce 1s infinite;
+            }
+            /* Chrome, Safari, Opera */ 
+            @-webkit-keyframes bounce {
+                0%   {box-shadow:0 0px 0px 0 black;}
+                20%  {box-shadow:0 0px 100px 0 black;transform:rotate(60deg);}
+                40%  {box-shadow:0 0px 0px 0 black;}
+                60%  {box-shadow:0 0px 100px 0 black;transform:rotate(-60deg);}
+                80%  {box-shadow:0 0px 0px 0 black;}
+                100% {box-shadow:0 0px 10px 0 black;}
+            }
+
+            /* Standard syntax */
+            @keyframes bounce {
+                0%   {box-shadow:0 0px 0px 0 black;}
+                20%  {box-shadow:0 0px 100px 0 black;transform:rotate(60deg);}
+                40%  {box-shadow:0 0px 0px 0 black;}
+                60%  {box-shadow:0 0px 100px 0 black;transform:rotate(-60deg);}
+                80%  {box-shadow:0 0px 0px 0 black;}
+                100% {box-shadow:0 0px 10px 0 black;}
+}
+        </style>
+        <div class='btn-med animation'></div>
+
+
+    </div>
+
+    <!--footer placeholder-->
+    <div id="foot-placeholder"></div>
+
+
+</body>
+</html>
