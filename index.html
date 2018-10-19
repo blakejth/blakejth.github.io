@@ -22,17 +22,16 @@
 
 
   <body>
-        
         <script>
-        //Load Navigation and footer from HTML
-        window.onload = function(){
-            $.get("nav.html", function(data){
-                $("#nav-placeholder").html(data);
-            })
-            $.get("foot.html", function(data1){
-                $("#foot-placeholder").html(data1);
-            })
-        }
+          //Load Navigation and footer from HTML
+          window.onload = function(){
+              $.get("nav.html", function(data){
+                  $("#nav-placeholder").html(data);
+              })
+              $.get("foot.html", function(data1){
+                  $("#foot-placeholder").html(data1);
+              })
+          }
         </script>
 
     <!--Nav placeholder-->
@@ -55,13 +54,13 @@
 
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="test.html">
-          <img class="rounded-circle img-fluid d-block mx-auto" src="images\bad1.jpg" alt="Not completed"> </a>
+          <span class="glyphicon glyphicon-remove"></span> </a>
           <p>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</p>
         </div>
 
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="#">
-          <img class="rounded-circle img-fluid d-block mx-auto" src="images\good.png" alt="Not completed"> </a>
+          <span class="glyphicon glyphicon-ok"></span> </a>
           <p>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</p>
         </div>
 
