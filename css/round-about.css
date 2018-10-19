@@ -25,3 +25,12 @@ img.imgSize {
 .row {
   margin-bottom: 100px;
 }
+
+#codeContainer {
+  background-color: grey;
+  width: 98%;
+  min-height: 95vh;
+  margin: auto;
+  position: fixed;
+  display: none;
+}
