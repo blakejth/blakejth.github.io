@@ -21,3 +21,7 @@ img.imgSize {
 	height: 200px;
 	width: 200px;
 }
+
+.row {
+  margin-bottom: 100px;
+}
