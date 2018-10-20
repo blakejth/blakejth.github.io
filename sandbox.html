@@ -1,41 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
 
+  <head>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Theodore Hancock</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a id='viewCode' href='#' class="nav-link">View/Hide code</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    
-    <script type="text/javascript">
-      $(document).ready(function () {
-          $('#viewCode').click(function () {
-              $('#codeContainer').stop(true).fadeToggle();
-          })
-      });
-    </script>
-    <style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="My CIT 261 Class content" content="">
+    <meta name="Theodore Hancock" content="">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <title>(topic)</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/round-about.css" rel="stylesheet">
+
+  </head>
+ <body>
+ 	
+        <script>
+        //Load Navigation and footer from HTML
+        window.onload = function(){
+            $.get("nav.html", function(data){
+                $("#nav-placeholder").html(data);
+            })
+            $.get("foot.html", function(data1){
+                $("#foot-placeholder").html(data1);
+            })
+        }
+        </script>
+
+    <!--Nav placeholder-->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Content -->
+    <div class="container">
+    	<h1 class="my-4">(topic)
+        	<small></small>
+      	</h1>
+
+ <!--TEST TEST TEST END-->     	
+<style>
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -121,3 +129,17 @@ window.onclick = function(event) {
 </script>
 
 <!--TEST TEST TEST END-->
+
+
+
+
+
+
+    </div>
+
+    <!--footer placeholder-->
+    <div id="foot-placeholder"></div>
+
+
+</body>
+</html>
