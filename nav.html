@@ -28,13 +28,6 @@
       </div>
     </nav>
     
-    <script type="text/javascript">
-      $(document).ready(function () {
-          $('#viewCode').click(function () {
-              $('#codeContainer').stop(true).fadeToggle();
-          })
-      });
-    </script>
     <style>
 /* The Modal (background) */
 .modal {
@@ -76,11 +69,6 @@
 }
 </style>
 
-<h2>Modal Example</h2>
-
-
-<button id="myBtn">Open Modal</button>
-
 
 <div id="myModal" class="modal">
 
@@ -97,7 +85,7 @@
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("viewCode");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
