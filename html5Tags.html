@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="My CIT 261 Class content" content="">
+    <meta name="Theodore Hancock" content="">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <title>HTML 5 Tags</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/round-about.css" rel="stylesheet">
+
+  </head>
+ <body>
+ 	
+        <script>
+        //Load Navigation and footer from HTML
+        window.onload = function(){
+            $.get("nav.html", function(data){
+                $("#nav-placeholder").html(data);
+            })
+            $.get("foot.html", function(data1){
+                $("#foot-placeholder").html(data1);
+            })
+        }
+        </script>
+
+    <!--Nav placeholder-->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Content -->
+    <div class="container">
+    	<h1 class="my-4">HTML5 Tags - Video, Audio, and Canvas
+        	<small></small>
+      	</h1>
+
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<table class="table">
+  <tbody>
+    <tr>
+      <td>
+        <audio controls>
+          <source src="sounds/fire.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio> 
+      </td>
+      <td>
+        <audio controls>
+          <source src="sounds/whawha.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio> 
+      </td>
+      <td>
+        <audio controls>
+          <source src="sounds/thunder.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio> 
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <td><i class="fa fa-fire fa-5x"></i></td>
+      <td><i class="fa fa-internet-explorer fa-5x"></i></td>
+      <td><i class="fa fa-bolt fa-5x"></i></td>
+    </tr>
+  </tbody>
+</table>
+
+
+    </div>
+
+    <!--footer placeholder-->
+    <div id="foot-placeholder"></div>
+
+
+</body>
+</html>
