@@ -28,6 +28,9 @@
       </div>
     </nav>
     
+
+
+    
     <style>
 /* The Modal (background) */
 .modal {
@@ -94,7 +97,7 @@ var span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
     modal.style.display = "block";
     var markup = document.documentElement.innerHTML;
-    $('#pageData').html( markup );
+    document.getElementById('pageData').innerHTML = markup;
 }
 
 // When the user clicks on <span> (x), close the modal
