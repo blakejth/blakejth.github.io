@@ -75,7 +75,7 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
+    <xmp id='pageData'></xmp>
   </div>
 
 </div>
@@ -93,6 +93,8 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
     modal.style.display = "block";
+    var markup = document.documentElement.innerHTML;
+    $('#pageData').html( markup );
 }
 
 // When the user clicks on <span> (x), close the modal
