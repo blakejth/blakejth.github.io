@@ -9,16 +9,19 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <title>Theodore CIT 261</title>
   </head>
+
   <body>
+
     <!-- Start of Loading Screen -->
     <script>
     $(window).load(function () {
-    setTimeout(function(){
+      setTimeout(function(){
     $('#preloader').fadeOut('slow', function () {
     });
     },2000); // set the time here
     });
     </script>
+
     <style type="text/css">
     #preloader {
     top: 0;
@@ -61,14 +64,20 @@
     animation:breathe 7s ease infinite;
     }
     </style>
+    
     <div id='preloader'> <p id='loadingT'>Give me an A</p></div>
     <!-- End of Loading Screen -->
-    <script type="text/javascript">
-    document.onreadystatechange = () => {
-    if (document.readyState === 'complete') {
-    document.getElementById('status').innerHTML = 'Page has been loaded';
+    
+    <script>
+    //Load Navigation and footer from HTML
+    window.onload = function(){
+    $.get("nav.html", function(data){
+    $("#nav-placeholder").html(data);
+    })
+    $.get("foot.html", function(data1){
+    $("#foot-placeholder").html(data1);
+    })
     }
-    };
     </script>
     <!--Nav placeholder-->
     <div id="nav-placeholder"> </div>
