@@ -1,187 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="My CIT 261 Class content" content="">
     <meta name="Theodore Hancock" content="">
     <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
     <title>Theodore CIT 261</title>
-
-
   </head>
-
-
   <body>
     <!-- Start of Loading Screen -->
-        <style type="text/css">
-            #preloader {
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              position: fixed;
-              background-color: #343A40;
-            }
-            @import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-            @keyframes breathe {
-              0% {
-                letter-spacing:0;
-                text-shadow:0 0 1px white;
-              }
-              30% {
-                color:transparent;
-              }
-              50% {
-                letter-spacing:100px;
-                font-size:0;
-                text-shadow:0 0 6px white;
-              }
-              60% {
-                color:transparent;
-              }
-              100% {
-                letter-spacing:0;
-                text-shadow:0 0 1px white;
-              }
-            }
-            #loadingT {
-              text-align:center;
-              color:white;
-              font-size:2em;
-              position:relative;
-              top:50%;
-              transform:translateY(-50px);
-              font-family: 'Montserrat', sans-serif;
-              animation:breathe 7s ease infinite;
-            }
-        </style>
-
-        <div id='preloader'> <p id='loadingT'>Give me an A</p></div>
-        <!-- End of Loading Screen -->
-        <script type="text/javascript">
-            document.onreadystatechange = () => {
-              if (document.readyState === 'complete') {
-                document.getElementById('status').innerHTML = 'Page has been loaded';
-              }
-            };
-        </script>
-
-
+    <script>
+    $(window).load(function () {
+    setTimeout(function(){
+    $('#preloader').fadeOut('slow', function () {
+    });
+    },2000); // set the time here
+    });
+    </script>
+    <style type="text/css">
+    #preloader {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #343A40;
+    }
+    @import url(https://fonts.googleapis.com/css?family=Montserrat);
+    @keyframes breathe {
+    0% {
+    letter-spacing:0;
+    text-shadow:0 0 1px white;
+    }
+    30% {
+    color:transparent;
+    }
+    50% {
+    letter-spacing:100px;
+    font-size:0;
+    text-shadow:0 0 6px white;
+    }
+    60% {
+    color:transparent;
+    }
+    100% {
+    letter-spacing:0;
+    text-shadow:0 0 1px white;
+    }
+    }
+    #loadingT {
+    text-align:center;
+    color:white;
+    font-size:2em;
+    position:relative;
+    top:50%;
+    transform:translateY(-50px);
+    font-family: 'Montserrat', sans-serif;
+    animation:breathe 7s ease infinite;
+    }
+    </style>
+    <div id='preloader'> <p id='loadingT'>Give me an A</p></div>
+    <!-- End of Loading Screen -->
+    <script type="text/javascript">
+    document.onreadystatechange = () => {
+    if (document.readyState === 'complete') {
+    document.getElementById('status').innerHTML = 'Page has been loaded';
+    }
+    };
+    </script>
     <!--Nav placeholder-->
     <div id="nav-placeholder"> </div>
-
     <!-- Page Content -->
     <div class="container">
-
       <!-- Introduction Row -->
       <h1 class="my-4">CIT 261
-        <small></small>
+      <small></small>
       </h1>
       <p>Below are my topics and examples of my skills learned throughout this class. A red X idicates that there is no content to be reviewed for a topic. Green means that there is topic that can be viewed. </p>
-
       <!-- Team Members Row -->
       <div class="row">
         <div class="col-lg-12">
           <h2 class="my-4">Topics</h2>
         </div>
-
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="test.html">
           <img class="rounded-circle img-fluid d-block mx-auto imgSize" src="images\bad1.jpg" alt="Not completed"> </a>
           <p>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</p>
         </div>
-
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="#">
           <img class="rounded-circle img-fluid d-block mx-auto imgSize" src="images\bad1.jpg" alt="Not completed"> </a>
           <p>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</p>
         </div>
-
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="#">
           <img class="rounded-circle img-fluid d-block mx-auto imgSize" src="images\bad1.jpg" alt="Not completed"> </a>
           <p>JSON Parse, Stringify</p>
         </div>
-
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="#">
           <img class="rounded-circle img-fluid d-block mx-auto imgSize" src="images\bad1.jpg" alt="Not completed"> </a>
           <p>Using XMLHTTPRequest to Consume a JSON Web Service</p>
         </div>
-
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="#">
           <img class="rounded-circle img-fluid d-block mx-auto imgSize" src="images\bad1.jpg" alt="Not completed"> </a>
           <p>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</p>
         </div>
-
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="#">
           <img class="rounded-circle img-fluid d-block mx-auto imgSize" src="images\bad1.jpg" alt="Not completed"></a>
           <p>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc</p>
         </div>
-
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="#">
           <img class="rounded-circle img-fluid d-block mx-auto imgSize" src="images\bad1.jpg" alt="Not completed"></a>
           <p>Manipulating CSS Class Properties Using JavaScript</p>
         </div>
-
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="#">
           <img class="rounded-circle img-fluid d-block mx-auto imgSize" src="images\bad1.jpg" alt="Not completed"></a>
           <p>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</p>
         </div>
-
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="#">
           <img class="rounded-circle img-fluid d-block mx-auto imgSize" src="images\bad1.jpg" alt="Not completed"></a>
           <p>Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.) and Animation and Transition Events</p>
         </div>
-
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="html5Tags.html">
           <img class="rounded-circle img-fluid d-block mx-auto imgSize" src="images\good.png" alt="Pending"></a>
           <p>HTML5 Tags - Video, Audio, and Canvas</p>
         </div>
-
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="#">
           <img class="rounded-circle img-fluid d-block mx-auto imgSize" src="images\bad1.jpg" alt="Not completed"></a>
           <p>Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (Thought Library)</p>
         </div>
-
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="#">
           <img class="rounded-circle img-fluid d-block mx-auto imgSize" src="images\bad1.jpg" alt="Not completed"></a>
           <p>Designing, Defining, and Triggering CSS3 Transforms without Custom Libraries (Thought Library)</p>
         </div>
-
         <div class="col-lg-4 col-sm-6 text-center mb-4">
           <a href="css3-animations.html">
           <img class="rounded-circle img-fluid d-block mx-auto imgSize" src="images\good.png" alt="Pending"></a>
           <p>Designing, Defining, and Triggering CSS3 Animations without Custom Libraries (Thought Library)</p>
         </div>
-
-
       </div>
     </div>
     <!-- /.container -->
-
     <!--footer placeholder-->
     <div id="foot-placeholder"></div>
-
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
   </body>
-
 </html>
