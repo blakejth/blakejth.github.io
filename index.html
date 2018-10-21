@@ -25,18 +25,6 @@
             };
         </script>
 
-        
-        <script>
-          //Load Navigation and footer from HTML
-          window.onload = function(){
-              $.get("nav.html", function(data){
-                  $("#nav-placeholder").html(data);
-              })
-              $.get("foot.html", function(data1){
-                  $("#foot-placeholder").html(data1);
-              })
-          }
-        </script>
 
     <!--Nav placeholder-->
     <div id="nav-placeholder"> </div>
@@ -48,7 +36,6 @@
       <h1 class="my-4">CIT 261
         <small></small>
       </h1>
-      <p id='status'>Page is loading</p>
       <p>Below are my topics and examples of my skills learned throughout this class. A red X idicates that there is no content to be reviewed for a topic. Green means that there is topic that can be viewed. </p>
 
       <!-- Team Members Row -->

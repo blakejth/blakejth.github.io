@@ -10,7 +10,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-    <title>(topic)</title>
+    <title>Sandbox</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -39,19 +39,23 @@
 
     <!-- Page Content -->
     <div class="container">
-    	<h1 class="my-4">(topic)
+    	<h1 class="my-4">Sandbox
         	<small></small>
       	</h1>
+
+
+
         <script type="text/javascript">
-            document.onreadystatechange = () => {
-              if (document.readyState === 'complete') {
-                document.getElementById('status').innerHTML = 'Page has been loaded';
-              }
-            };
+           $(window).load(function () {
+                setTimeout(function(){
+                    $('#preloader').fadeOut('slow', function () {
+                    });
+                },2000); // set the time here
+            });  
         </script>
 
-        <p id='status'>Page is loading</p>
 
+        
 
 
 
