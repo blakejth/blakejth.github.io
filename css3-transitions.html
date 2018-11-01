@@ -1,85 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="My CIT 261 Class content" content="">
-        <meta name="Theodore Hancock" content="">
-        <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <title>CSS3 Transitions</title>
-        <!-- Bootstrap core CSS -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Custom styles for this template -->
-        <link href="css/round-about.css" rel="stylesheet">
-    </head>
-    <body>
-        
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="My CIT 261 Class content" content="">
+    <meta name="Theodore Hancock" content="">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <title>CSS3 Transitions</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/round-about.css" rel="stylesheet">
+
+  </head>
+ <body>
+ 	
         <script>
         //Load Navigation and footer from HTML
         window.onload = function(){
-        $.get("nav.html", function(data){
-        $("#nav-placeholder").html(data);
-        })
-        $.get("foot.html", function(data1){
-        $("#foot-placeholder").html(data1);
-        })
+            $.get("nav.html", function(data){
+                $("#nav-placeholder").html(data);
+            })
+            $.get("foot.html", function(data1){
+                $("#foot-placeholder").html(data1);
+            })
         }
         </script>
-        <!--Nav placeholder-->
-        <div id="nav-placeholder"></div>
-        <!-- Page Content -->
-        <div class="container">
-            <h1 class="my-4">CSS3 Transitions
-            <small></small>
-            </h1>
-            <h3>What is CSS3 Transitions?</h3>
-            <p>"CSS transitions allows you to change property values smoothly (from one value to another), over a given
-                duration." Rather than having properties change instantly, they can be modified with transitions to give
-                more appeal. An example is the way that a window collapses on your computer. My personal favorite is on
-                the Mac as it makes a cool animation. This transition lets the user know that the window didn't just
-            dissapear but it minimized to a location where the user can then click again to resume.</p>
-            <h6><a href="https://www.w3schools.com/css/css3_transitions.asp">https://www.w3schools.com/css/
-            css3_transitions.asp</a></h6>
-            <h6><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">
-                https://developer.mozilla.org
-            </a></h6>
-            <hr>
-            <h3>What does it look like (code)</h3>
-            <p><u>Syntax</u> transition: property duration timing-function delay|initial|inherit;</p>
-            <p><u>Example code</u> transition: opacity 0.3s;</p>
-            <hr>
-            <h3>Example</h3>
-            <p>With this example, we are able to show a smaller button and if the user is unsure or hovers over, they
-            will be shown more information.</p>
-            <p data-height="265" data-theme-id="0" data-slug-hash="qJezMO" data-default-tab="css,result" data-user="
-                WesternDuckling" data-pen-title="qJezMO" class="codepen">See the Pen <a href="https://codepen.io/
-                WesternDuckling/pen/qJezMO/">qJezMO</a> by Blake  (<a href="https://codepen.io/WesternDuckling">
-                @WesternDuckling</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                <hr>
-                <h3>Website example</h3>
-                <a href="https://mckenzieryanphoto.com/">Click here</a>
-                <p>If you scroll down, you will see a picture that when you hover, the box because more
-                transparent. This is an example of a transition.</p>
-                <p data-height="277" data-theme-id="0" data-slug-hash="bmXXgQ" data-default-tab="html,result"
-                    data-user="WesternDuckling" data-pen-title="opacity transition" class="codepen">See the Pen <a href
-                    ="https://codepen.io/WesternDuckling/pen/bmXXgQ/">opacity transition</a> by Blake  (<a href="
-                https://codepen.io/WesternDuckling">@WesternDuckling</a>) on <a href="https://codepen.io">CodePen</
-            a>.</p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-            <hr>
-            <h3>Important thins to remember</h3>
-            <ul>
-                <li>CSS3 Transitions are not compatible with all browsers. <a href="https://caniuse.com/#feat=css-transitions">Compatability</a></li>
-                <li>You can't animate all properties as it wouldn't make sence for some. A list can be found <a
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">here</a></li>
-                <li>When searching the web, when ever an item smoothly transitions, you can guess that this is
-                using CSS3 Transitions!</li>
-            </ul>
-        </div>
-        <!--footer placeholder-->
-        <div id="foot-placeholder"></div>
-        <br><br><br><br><br><br><br>
-    </body>
+
+    <!--Nav placeholder-->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Content -->
+    <div class="container">
+    	<h1 class="my-4">CSS3 Transitions
+        	<small></small>
+      	</h1>
+
+        <h3>What is CSS3 Transitions?</h3>
+        <p>"CSS transitions allows you to change property values smoothly (from one value to another), over a given duration." Rather than having properties change instantly, they can be modified with transitions to give more appeal. An example is the way that a window collapses on your computer. My personal favorite is on the Mac as it makes a cool animation. This transition lets the user know that the window didn't just dissapear but it minimized to a location where the user can then click again to resume.</p>
+
+        <h6><a href="https://www.w3schools.com/css/css3_transitions.asp">https://www.w3schools.com/css/css3_transitions.asp</a></h6>
+
+        <h6><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions</a></h6>
+
+        <hr>
+
+        <h3>What does it look like (code)</h3>
+        <p><u>Syntax</u> transition: property duration timing-function delay|initial|inherit;</p>
+        <p><u>Example code</u> transition: opacity 0.3s;</p>
+
+        <hr>
+        <h3>Example</h3>
+        <p>With this example, we are able to show a smaller button and if the user is unsure or hovers over, they will be shown more information.</p>
+        <p data-height="265" data-theme-id="0" data-slug-hash="qJezMO" data-default-tab="css,result" data-user="WesternDuckling" data-pen-title="qJezMO" class="codepen">See the Pen <a href="https://codepen.io/WesternDuckling/pen/qJezMO/">qJezMO</a> by Blake  (<a href="https://codepen.io/WesternDuckling">@WesternDuckling</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+        <hr>
+
+        <h3>Website example</h3>
+
+        <a href="https://mckenzieryanphoto.com/">Click here</a>
+        <p>If you scroll down, you will see a picture that when you hover, the box because more transparent. This is an example of a transition.</p>
+
+        <p data-height="277" data-theme-id="0" data-slug-hash="bmXXgQ" data-default-tab="html,result" data-user="WesternDuckling" data-pen-title="opacity transition" class="codepen">See the Pen <a href="https://codepen.io/WesternDuckling/pen/bmXXgQ/">opacity transition</a> by Blake  (<a href="https://codepen.io/WesternDuckling">@WesternDuckling</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+
+        <hr>
+
+        <h3>Important thins to remember</h3>
+        <ul>
+            <li>CSS3 Transitions are not compatible with all browsers. <a href="https://caniuse.com/#feat=css-transitions">Compatability</a></li>
+            <li>You can't animate all properties as it wouldn't make sence for some. A list can be found <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">here</a></li>
+            <li>When searching the web, when ever an item smoothly transitions, you can guess that this is using CSS3 Transitions</li>
+        </ul>
+
+    </div>
+
+    <!--footer placeholder-->
+    <div id="foot-placeholder"></div>
+
+    <br><br><br><br><br><br><br>
+
+
+</body>
 </html>
