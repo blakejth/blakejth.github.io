@@ -34,3 +34,15 @@ img.imgSize {
   position: fixed;
   display: none;
 }
+
+p.pending {
+  color: yellow;
+}
+
+p.bad {
+  color: red;
+}
+
+p.graded {
+  color: green;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="My CIT 261 Class content" content="">
+    <meta name="Theodore Hancock" content="">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <title>Manipulating CSS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/round-about.css" rel="stylesheet">
+
+  </head>
+ <body>
+ 	
+        <script>
+        //Load Navigation and footer from HTML
+        window.onload = function(){
+            $.get("nav.html", function(data){
+                $("#nav-placeholder").html(data);
+            })
+            $.get("foot.html", function(data1){
+                $("#foot-placeholder").html(data1);
+            })
+        }
+        </script>
+
+    <!--Nav placeholder-->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Content -->
+    <div class="container">
+    	<h1 class="my-4">Manipulating CSS class properties with JavaScript
+        	<small></small>
+      	</h1>
+
+        <h3>Example</h3>
+        <p>This example uses a mouse listenever and changes the top and left class property of the DV. You will always be happy with your Salary with this questionair.</p>
+
+        <xmp>
+            function moveBox(){
+  
+                var x = Math.floor((Math.random() * 400) + 1);
+                var y = Math.floor((Math.random() * 400) + 1);
+                
+              
+                document.getElementById('Qcontainer').style.marginTop = x+'px';
+                document.getElementById('Qcontainer').style.marginLeft = y+'px';
+            }
+        </xmp>
+
+
+
+        <style type="text/css">
+            #questionBox {
+              height: 130px;
+              width: 300px;
+              border: solid black;
+              background-color: lightgrey;
+              border-radius: 25px;
+            }
+            button.btn {
+                top: 50px;
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 0 auto;
+                cursor: pointer;
+            }
+            #Qcontainer {
+              width: 306px;
+              padding: 10px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function moveBox(){
+  
+                var x = Math.floor((Math.random() * 400) + 1);
+                var y = Math.floor((Math.random() * 400) + 1);
+                
+              
+                document.getElementById('Qcontainer').style.marginTop = x+'px';
+                document.getElementById('Qcontainer').style.marginLeft = y+'px';
+            }
+                  
+                  
+                  
+                  //  $("#Qcontainer").css({top: x, left: y, position:'absolute'});
+              
+              function yes(){
+                window.alert("You response is recorded");
+              }
+              
+              function no(){
+                window.alert("To bad!");
+              }
+
+            document.getElementById('Qcontainer').addEventListener("mouseover", moveBox);
+        </script>
+
+        <div id="Qcontainer" onmouseover="moveBox(this)" >
+          <div id='questionBox' style="text-align:center;">
+            <h4 style='text-align:center;'>Are you happy with your salary?</h4>
+            <button class='btn' type='button' onClick='yes()'>Yes</button>
+            <button class='btn' type='button' onClick='no()'>No</button>
+            
+          </div>
+          
+        </div>
+
+
+
+    <br><br><br><br>
+    </div>
+
+    <!--footer placeholder-->
+    <div id="foot-placeholder"></div>
+
+
+</body>
+</html>
