@@ -57,6 +57,49 @@
             }
         </xmp>
 
+<hr>
+        <style type="text/css">
+            #questionBox1 {
+              height: 130px;
+              width: 300px;
+              border: solid black;
+              background-color: lightgrey;
+              border-radius: 25px;
+            }
+            #Qcontainer1 {
+              width: 306px;
+              padding: 10px;
+            }
+        </style>
+
+        <script type="text/javascript">
+          
+            function hideBox(){
+                document.getElementById('no').style.visibility = 'hidden';
+            }
+          
+            function showBox(){
+              document.getElementById('no').style.visibility = 'visible';
+            }
+                  
+                  
+                 
+
+            document.getElementById('Qcontainer1').addEventListener("mouseenter", hideBox);
+            document.getElementById('questionBox1').addEventListener("mouseleave", showBox);
+        </script>
+
+        <div id="Qcontainer1" onmouseover="hideBox(this)" onmouseout="showBox(this)">
+          <div id='questionBox1' style="text-align:center;">
+            <h4 style='text-align:center;'>Are you happy with your salary?</h4>
+            <button class='btn' type='button' onClick='yes()'>Yes</button>
+            <button id='no' class='btn' type='button' onClick='no()'>No</button>
+            
+          </div>
+          
+        </div>
+
+
 
 
         <style type="text/css">
