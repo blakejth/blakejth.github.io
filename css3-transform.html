@@ -44,8 +44,86 @@
 
         <h3>What is it?</h3>
         <p>CSS Transforms and transformations are used to change the shape and/or location of an element</p>
+        <p>The best resource that I found can be reviewed <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">here</a>.</p>
         
+        <hr>
 
+        <p>Two examples below</p>
+
+        <xmp>
+            .box:hover {
+              -ms-transform: rotate(30deg);
+              -webkit-transform: rotate(30deg); 
+              transform: rotate(30deg);
+            }
+
+            .circle:hover {
+              -ms-transform:scale(1.5,1.5);
+              -webkit-transform:scale(1.5,1.5);
+              transform:scale(1.5,1.5);
+            }
+        </xmp>
+
+        <style type="text/css">
+            #contain {
+              text-align: center;
+            }
+            .box {
+              height: 100px;
+              width: 100px;
+              background-color: lightgrey;
+            }
+
+            .circle {
+              height: 100px;
+              width: 100px;
+              background-color: grey;
+              border-radius: 100%;
+            }
+
+            .box:hover {
+              -ms-transform: rotate(30deg);
+              -webkit-transform: rotate(30deg); 
+              transform: rotate(30deg);
+            }
+
+            .circle:hover {
+              -ms-transform:scale(1.5,1.5);
+              -webkit-transform:scale(1.5,1.5);
+              transform:scale(1.5,1.5);
+            }
+        </style>
+
+        <div id="contain">
+            <div class="box">rotate</div>
+            <div class="circle">Scale</div>
+        </div>
+        <br>
+
+        <hr>
+
+        <h3>Real world example</h3>
+        <p>The following is an example that many photo websites use to indicate when a mouse is hovering an image. We can use transition to make the transform smooth.</p>
+
+        <xmp>
+            .hoverActive { 
+              transition: all 1s ease-in-out; 
+            }
+            .hoverActive:hover { 
+              transform: scale(1.05); 
+            }
+        </xmp>
+
+        <style type="text/css">
+            .hoverActive { 
+              transition: all 1s ease-in-out; 
+            }
+            .hoverActive:hover { 
+              transform: scale(1.05); 
+            }
+        </style>
+
+        <img class="hoverActive" src="http://photo.byui.edu/img/s1/v46/p487577682-2.jpg" alt="BYU-I">
 
 
     <br><br><br><br>
