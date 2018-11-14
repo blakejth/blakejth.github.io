@@ -73,8 +73,10 @@
           }
         </style>
         <script type="text/javascript">
-            function loaded(){
-              document.getElementById("loadedDiv").innerHTML = "Page has loaded."
+            window.onload = loaded(); 
+              
+             function loaded(){
+              document.getElementById("test1").innerHTML = "Page has loaded."; 
             }
         </script>
 
@@ -92,9 +94,12 @@
           }
         </style>
         <script type="text/javascript">
+            window.onload = loaded(); 
+              
             function loaded(){
-              document.getElementById("loadedDiv").innerHTML = "Page has loaded."
+            document.getElementById("test1").innerHTML = "Page has loaded."; 
             }
+
         </script>
 
         <div class="box" id="loadedDiv" onload="loaded()"></div>
