@@ -13,7 +13,7 @@
         <!-- Custom styles for this template -->
         <link href="css/round-about.css" rel="stylesheet">
     </head>
-    <body onload="checkName()">
+    <body>
         
         <script>
         //Load Navigation and footer from HTML
@@ -29,7 +29,7 @@
         <!--Nav placeholder-->
         <div id="nav-placeholder"></div>
         <!-- Page Content -->
-        <div class="container">
+        <div class="container" onload="checkName()">
             <h1 class="my-4">Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects
             </h1>
             <input id="name" type="name" placeholder="What is your name?"></input>
