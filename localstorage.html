@@ -33,7 +33,7 @@
             <h1 class="my-4">Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects
             </h1>
             <input id="name" type="name" placeholder="What is your name?"></input>
-            <button type="button" onClick="saveName()">Save my name</button>
+            <button type="button" onClick="saveName() checkName()">Save my name</button>
             <p id="displayName"></p>
             <script type="text/javascript">
             function saveName(){
@@ -42,7 +42,7 @@
             localStorage.setItem('name', JSON.stringify(name));
             window.alert("Thank you " + name + ", your response has been recorded.")
             }
-            window.onload = function checkName(){
+            function checkName(){
             var retrievedName = localStorage.getItem('name');
             var name1 = retrievedName.slice(1, -1);
             
