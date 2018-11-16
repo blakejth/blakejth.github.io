@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="My CIT 261 Class content" content="">
+        <meta name="Theodore Hancock" content="">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <title>Local storage</title>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/round-about.css" rel="stylesheet">
+    </head>
+    <body onload="checkName()">
+        
+        <script>
+        //Load Navigation and footer from HTML
+        window.onload = function(){
+        $.get("nav.html", function(data){
+        $("#nav-placeholder").html(data);
+        })
+        $.get("foot.html", function(data1){
+        $("#foot-placeholder").html(data1);
+        })
+        }
+        </script>
+        <!--Nav placeholder-->
+        <div id="nav-placeholder"></div>
+        <!-- Page Content -->
+        <div class="container">
+            <h1 class="my-4">Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects
+            </h1>
+            <input id="name" type="name" placeholder="What is your name?"></input>
+            <button type="button" onClick="saveName()">Save my name</button>
+            <p id="displayName"></p>
+            <script type="text/javascript">
+            function saveName(){
+            var name = document.getElementById("name").value;
+            // Put the object into storage
+            localStorage.setItem('name', JSON.stringify(name));
+            window.alert("Thank you " + name + ", your response has been recorded.")
+            }
+            window.onload = function checkName(){
+            var retrievedName = localStorage.getItem('name');
+            var name1 = retrievedName.slice(1, -1);
+            
+            if (retrievedName === "") {
+            document.getElementById("displayName").innerHTML = "I don't know what to call you yet. Please enter your name above";
+            } else {
+            document.getElementById("displayName").innerHTML = "Welcome back "+ name1 + ", if you would like me to call you by another name, please insert it above.";
+            }
+            }
+            </script>
+            <br><br><br><br>
+        </div>
+        <!--footer placeholder-->
+        <div id="foot-placeholder"></div>
+    </body>
+</html>
