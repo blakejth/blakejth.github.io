@@ -32,27 +32,12 @@
         <div class="container">
             <h1 class="my-4">Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects
             </h1>
-            <input id="name" type="name" placeholder="What is your name?"></input>
-            <button type="button" onClick="saveName() checkName()">Save my name</button>
-            <p id="displayName"></p>
-            <script type="text/javascript">
-            function saveName(){
-            var name = document.getElementById("name").value;
-            // Put the object into storage
-            localStorage.setItem('name', JSON.stringify(name));
-            window.alert("Thank you " + name + ", your response has been recorded.")
-            }
-            function checkName(){
-            var retrievedName = localStorage.getItem('name');
-            var name1 = retrievedName.slice(1, -1);
+            <hr>
+
             
-            if (retrievedName === "") {
-            document.getElementById("displayName").innerHTML = "I don't know what to call you yet. Please enter your name above";
-            } else {
-            document.getElementById("displayName").innerHTML = "Welcome back "+ name1 + ", if you would like me to call you by another name, please insert it above.";
-            }
-            }
-            </script>
+<p data-height="518" data-theme-id="0" data-slug-hash="WYORbq" data-default-tab="js,result" data-user="WesternDuckling" data-pen-title="Local Storage" class="codepen">See the Pen <a href="https://codepen.io/WesternDuckling/pen/WYORbq/">Local Storage</a> by Blake  (<a href="https://codepen.io/WesternDuckling">@WesternDuckling</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
             <br><br><br><br>
         </div>
         <!--footer placeholder-->
