@@ -1,105 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="My CIT 261 Class content" content="">
-    <meta name="Theodore Hancock" content="">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
-    <title>JavaScript Events</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/round-about.css" rel="stylesheet">
-
-  </head>
- <body>
- 	
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="My CIT 261 Class content" content="">
+        <meta name="Theodore Hancock" content="">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <title>JavaScript Events</title>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/round-about.css" rel="stylesheet">
+    </head>
+    <body>
+        
         <script>
         //Load Navigation and footer from HTML
         window.onload = function(){
-            $.get("nav.html", function(data){
-                $("#nav-placeholder").html(data);
-            })
-            $.get("foot.html", function(data1){
-                $("#foot-placeholder").html(data1);
-            })
+        $.get("nav.html", function(data){
+        $("#nav-placeholder").html(data);
+        })
+        $.get("foot.html", function(data1){
+        $("#foot-placeholder").html(data1);
+        })
         }
         </script>
-
-    <!--Nav placeholder-->
-    <div id="nav-placeholder"></div>
-
-    <!-- Page Content -->
-    <div class="container">
-    	<h1 class="my-4">Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.) and Animation and Transition Events
-        	<small></small>
-      	</h1>
-
-        <h3>Differences</h3>
-
-        <p>When it comes to mobile and non mobile versions of a website there are a ton of similarities. The main difference is that for the most part, mobile devices use touch instead of a mouse so any interaction that involves hover won't register.</p>
-
-        <hr>
-
-        <h3>Example</h3>
-
-        <p>When you navigate to the home page there is a loading page that uses jQuery window.load fuction and fades out the page loader.</p>
-        <xmp>
+        <!--Nav placeholder-->
+        <div id="nav-placeholder"></div>
+        <!-- Page Content -->
+        <div class="container">
+            <h1 class="my-4">Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.) and Animation and Transition Events
+            <small></small>
+            </h1>
+            <h3>Differences</h3>
+            <p>When it comes to mobile and non mobile versions of a website there are a ton of similarities. The main difference is that for the most part, mobile devices use touch instead of a mouse so any interaction that involves hover won't register.</p>
+            <hr>
+            <h3>Example</h3>
+            <p>When you navigate to the home page there is a loading page that uses jQuery window.load fuction and fades out the page loader.</p>
+            <xmp>
             $(window).load(function () {
-              setTimeout(function(){
+            setTimeout(function(){
             $('#preloader').fadeOut('slow', function () {
             });
             },2000); // set the time here
             });
-        </xmp>
-        <p>I set there to be a delay because the page was loading to quickly and didn't give enough time for the user to read.</p>
-
-        <p>Here is another example</p>
-
-        <xmp>
+            </xmp>
+            <p>I set there to be a delay because the page was loading to quickly and didn't give enough time for the user to read.</p>
+            <p>Here is another example</p>
+            <xmp>
             <style type="text/css">
             .box {
-          text-align: center;
-          height: 100px;
-          width: 100px;
-          background-color: lightgrey;
-          }
-        </style>
-        <script type="text/javascript">
-            window.onload = loaded(); 
-              
-             function loaded(){
-              document.getElementById("test1").innerHTML = "Page has loaded."; 
+            text-align: center;
+            height: 100px;
+            width: 100px;
+            background-color: lightgrey;
             }
-        </script>
-
-        <div class="box" id="loadedDiv" onload="loaded()"></div>
-        </xmp>
-
-<p data-height="197" data-theme-id="0" data-slug-hash="pQRBaG" data-default-tab="js,result" data-user="WesternDuckling" data-pen-title="pQRBaG" class="codepen">See the Pen <a href="https://codepen.io/WesternDuckling/pen/pQRBaG/">pQRBaG</a> by Blake  (<a href="https://codepen.io/WesternDuckling">@WesternDuckling</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-<hr>
-
-<h3>Here is an example of a Javascript animation event</h3>
-
-<p data-height="265" data-theme-id="0" data-slug-hash="dQROYX" data-default-tab="js,result" data-user="WesternDuckling" data-pen-title="JS Animation transition event" class="codepen">See the Pen <a href="https://codepen.io/WesternDuckling/pen/dQROYX/">JS Animation transition event</a> by Blake  (<a href="https://codepen.io/WesternDuckling">@WesternDuckling</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-
-    <br><br><br><br>
-    </div>
-
-    <!--footer placeholder-->
-    <div id="foot-placeholder"></div>
-
-
-</body>
+            </style>
+            <script type="text/javascript">
+            window.onload = loaded();
+            
+            function loaded(){
+            document.getElementById("test1").innerHTML = "Page has loaded.";
+            }
+            </script>
+            <div class="box" id="loadedDiv" onload="loaded()"></div>
+            </xmp>
+            <p data-height="197" data-theme-id="0" data-slug-hash="pQRBaG" data-default-tab="js,result" data-user="WesternDuckling" data-pen-title="pQRBaG" class="codepen">See the Pen <a href="https://codepen.io/WesternDuckling/pen/pQRBaG/">pQRBaG</a> by Blake  (<a href="https://codepen.io/WesternDuckling">@WesternDuckling</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            <hr>
+            <h3>Here is an example of a Javascript animation event</h3>
+            <p data-height="265" data-theme-id="0" data-slug-hash="dQROYX" data-default-tab="js,result" data-user="WesternDuckling" data-pen-title="JS Animation transition event" class="codepen">See the Pen <a href="https://codepen.io/WesternDuckling/pen/dQROYX/">JS Animation transition event</a> by Blake  (<a href="https://codepen.io/WesternDuckling">@WesternDuckling</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            <hr>
+            <div id="container2">
+                
+                <xmp>
+                <style>
+                #button {
+                height: 100px;
+                width: 100px;
+                background-color: red;
+                color: white;
+                border-radius: 50px;
+                border-style: solid;
+                border-color: black;
+                cursor: pointer;
+                }
+                </style>
+                <script>
+                var numb = 0;
+                function test(){
+                numb += 1;
+                
+                document.getElementById("counter").innerHTML = "Click counter: " + numb;
+                document.getElementById("button").style.opacity = ".5";
+                }
+                function test1(){
+                document.getElementById("button").style.opacity = "1";
+                }
+                </script>
+                
+                <div id="button" onmousedown="test()" onmouseup="test1()"></div>
+                <p id="counter"></p>
+                </xmp>
+                <style>
+                #button {
+                height: 100px;
+                width: 100px;
+                background-color: red;
+                color: white;
+                border-radius: 50px;
+                border-style: solid;
+                border-color: black;
+                cursor: pointer;
+                }
+                </style>
+                <script>
+                var numb = 0;
+                function test(){
+                numb += 1;
+                
+                document.getElementById("counter").innerHTML = "Click counter: " + numb;
+                document.getElementById("button").style.opacity = ".5";
+                }
+                function test1(){
+                document.getElementById("button").style.opacity = "1";
+                }
+                </script>
+                
+                <div id="button" onmousedown="test()" onmouseup="test1()"></div>
+                <p id="counter"></p>
+            </div>
+            <br><br><br><br>
+        </div>
+        <!--footer placeholder-->
+        <div id="foot-placeholder"></div>
+    </body>
 </html>
