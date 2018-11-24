@@ -1,56 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="My CIT 261 Class content" content="">
-    <meta name="Theodore Hancock" content="">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
-    <title>JSON</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/round-about.css" rel="stylesheet">
-
-  </head>
- <body>
- 	
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="My CIT 261 Class content" content="">
+        <meta name="Theodore Hancock" content="">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <title>JSON</title>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/round-about.css" rel="stylesheet">
+    </head>
+    <body>
+        
         <script>
         //Load Navigation and footer from HTML
         window.onload = function(){
-            $.get("nav.html", function(data){
-                $("#nav-placeholder").html(data);
-            })
-            $.get("foot.html", function(data1){
-                $("#foot-placeholder").html(data1);
-            })
+        $.get("nav.html", function(data){
+        $("#nav-placeholder").html(data);
+        })
+        $.get("foot.html", function(data1){
+        $("#foot-placeholder").html(data1);
+        })
         }
         </script>
-
-    <!--Nav placeholder-->
-    <div id="nav-placeholder"></div>
-
-    <!-- Page Content -->
-    <div class="container">
-    	<h1 class="my-4">(topic)
-        	<small></small>
-      	</h1>
-
-
-
-
-    <br><br><br><br>
-    </div>
-
-    <!--footer placeholder-->
-    <div id="foot-placeholder"></div>
-
-
-</body>
+        <!--Nav placeholder-->
+        <div id="nav-placeholder"></div>
+        <!-- Page Content -->
+        <div class="container">
+            <h1 class="my-4">(topic)
+            <small></small>
+            </h1>
+            <h1>JSON parse</h1>
+            <p>When is morning and when is night?</p>
+            <button onclick="answerQ()">Answer</button>
+            <p id="test"></p>
+            <script>
+            var obj = JSON.parse('{"morning":"sunrise till noon", "night":"noon till midnight"}');
+            function answerQ(){
+            document.getElementById("test").innerHTML = "Morning is " + obj.morning + " and night is " + obj.night;
+            
+            }
+            </script>
+            <xmp>
+            <script>
+            var obj = JSON.parse('{"morning":"sunrise till noon", "night":"noon till midnight"}');
+            function answerQ(){
+            document.getElementById("test").innerHTML = "Morning is " + obj.morning + " and night is " + obj.night;
+            
+            }
+            </script>
+            </xmp>
+            <hr>
+            
+            <h2>JSON string</h2>
+            <p id="outPut"></p>
+            <script>
+            var numbers = [ 1, 2, 3, 4, 5 ];
+            var makeString = JSON.stringify(numbers);
+            document.getElementById("outPut").innerHTML = makeString;
+            </script>
+            <xmp>
+            <script>
+            var numbers = [ 1, 2, 3, 4, 5 ];
+            var makeString = JSON.stringify(numbers);
+            document.getElementById("outPut").innerHTML = makeString;
+            </script>
+            </xmp>
+            <br><br><br><br>
+        </div>
+        <!--footer placeholder-->
+        <div id="foot-placeholder"></div>
+    </body>
 </html>
