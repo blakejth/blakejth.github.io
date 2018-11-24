@@ -42,7 +42,158 @@
         	<small></small>
       	</h1>
 
+<script>
+  
+class Person{
+  addName(name){
+    this.name = name;
+  }
+  addAge(age){
+    this.age = age;
+  }
+}
 
+class Teacher extends Person{
+  addSubject(subject){
+    this.subject = subject;
+  }
+}
+
+
+class Flyer{
+  constructor(){
+    this.people = [];
+    this.age = [];
+  }
+  addPerson(person){
+    this.people.push(person);
+  }
+  addAge(age){
+    this.people.push(age);
+  }
+}
+
+
+var teacher = new Teacher();
+
+teacher.addName("Phil");
+teacher.addSubject("Math");
+
+
+
+
+var flyer = new Flyer();
+
+
+var person1 = new Person();
+var person2 = new Person();
+
+person1.addName("John");
+person1.addAge(22);
+flyer.addPerson(person1);
+
+person2.addName("Peter");
+person2.addAge(25);
+flyer.addPerson(person2);
+
+teacher.addAge(45);
+flyer.addPerson(teacher);
+
+
+function test(){
+  
+  //console.log(teacher);
+  
+  for (i=0; i<flyer.people.length; i++) {
+    
+    var nextAge = flyer.people[i].age + 1;
+    
+    document.getElementById("test"+i).innerHTML += "Hello " + flyer.people[i].name + " from our records you will be turning " + nextAge + " this year.";
+    
+    
+  }
+}
+
+</script>
+
+<h3>The following contains Object Creation Functions, Inheritance, Properties, Methods, Instantiation and can be used to see how old a person will be on their next birthday.</h3>
+
+<button onclick="test()">test</button>
+<p id="test0"></p>
+<p id="test1"></p>
+<p id="test2"></p>
+
+<xmp>
+  class Person{
+  addName(name){
+    this.name = name;
+  }
+  addAge(age){
+    this.age = age;
+  }
+}
+
+class Teacher extends Person{
+  addSubject(subject){
+    this.subject = subject;
+  }
+}
+
+
+class Flyer{
+  constructor(){
+    this.people = [];
+    this.age = [];
+  }
+  addPerson(person){
+    this.people.push(person);
+  }
+  addAge(age){
+    this.people.push(age);
+  }
+}
+
+
+var teacher = new Teacher();
+
+teacher.addName("Phil");
+teacher.addSubject("Math");
+
+
+
+
+var flyer = new Flyer();
+
+
+var person1 = new Person();
+var person2 = new Person();
+
+person1.addName("John");
+person1.addAge(22);
+flyer.addPerson(person1);
+
+person2.addName("Peter");
+person2.addAge(25);
+flyer.addPerson(person2);
+
+teacher.addAge(45);
+flyer.addPerson(teacher);
+
+
+function test(){
+  
+  //console.log(teacher);
+  
+  for (i=0; i<flyer.people.length; i++) {
+    
+    var nextAge = flyer.people[i].age + 1;
+    
+    document.getElementById("test"+i).innerHTML += "Hello " + flyer.people[i].name + " from our records you will be turning " + nextAge + " this year.";
+    
+    
+  }
+}
+</xmp>
 
 
     <br><br><br><br>
