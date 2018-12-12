@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="My CIT 261 Class content" content="">
+    <meta name="Theodore Hancock" content="">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/ >
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <title>Time Tracker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/round-about.css" rel="stylesheet">
+
+  </head>
+ <body>
+ 	
+        <script>
+        //Load Navigation and footer from HTML
+        window.onload = function(){
+            $.get("nav.html", function(data){
+                $("#nav-placeholder").html(data);
+            })
+            $.get("foot.html", function(data1){
+                $("#foot-placeholder").html(data1);
+            })
+        }
+        </script>
+
+    <!--Nav placeholder-->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Content -->
+    <div class="container">
+
+    	<p data-height="666" data-theme-id="0" data-slug-hash="NeqypG" data-default-tab="html,result" data-user="WesternDuckling" data-pen-title="VideoGameTracker2" class="codepen">See the Pen <a href="https://codepen.io/WesternDuckling/pen/NeqypG/">VideoGameTracker2</a> by Blake  (<a href="https://codepen.io/WesternDuckling">@WesternDuckling</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+
+
+    <br><br><br><br>
+    </div>
+
+    <!--footer placeholder-->
+    <div id="foot-placeholder"></div>
+
+
+</body>
+</html>
