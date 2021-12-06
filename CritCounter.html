@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script
+  src="https://code.jquery.com/jquery-3.6.0.slim.js"
+  integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+  crossorigin="anonymous"></script>
+
+		<title>Crit chance calculator</title>
+	</head>
+	<body>
+		<br>
+		<div class="text-center">
+		<button class="btn btn-danger align-middle btn-lg btn-block" onclick="addCrit()">Critical Hit</button>
+
+		<button class="btn btn-success btn-block btn-lg" onclick="addNorm()">Normal Hit</button>
+
+
+		<br>
+		<span>Total Crits:</span><span id='critHit'>0</span>
+		<br>
+		<span>Total hits:</span><span id='allHit'>0</span>
+		<br>
+		<span>Crit percent:</span><span id='critPer'>0</span><span>%</span>
+
+		<!-- <br>
+		<span id="test1"></span>
+		<span id="test2"></span> -->
+</div>
+	
+
+		<script type="text/javascript">
+
+
+
+			function addCrit() {
+		var totalCrit = document.getElementById('critHit').innerHTML;
+		var totalHit = document.getElementById('allHit').innerHTML;
+
+		var newCrit = parseInt(totalCrit)+1;
+		var newTot = parseInt(totalHit)+1;
+		
+		document.getElementById('critHit').innerHTML = parseInt(totalCrit)+1 ;
+		
+		document.getElementById('allHit').innerHTML = parseInt(totalHit)+1 ;
+		
+		document.getElementById('critPer').innerHTML = newCrit/newTot;
+
+		/*document.getElementById('test1').innerHTML = 'crit numb' + newCrit;
+		document.getElementById('test2').innerHTML = 'norm numb' + newTot;*/
+		}
+
+		function addNorm() {
+		var totalCrit = document.getElementById('critHit').innerHTML;
+		var totalHit = document.getElementById('allHit').innerHTML;
+
+		var newCrit = parseInt(totalCrit);
+		var newTot = parseInt(totalHit)+1;		
+
+
+		document.getElementById('allHit').innerHTML = parseInt(totalHit)+1 ;
+
+		document.getElementById('critPer').innerHTML = newCrit/newTot;
+
+		/*document.getElementById('test1').innerHTML = 'crit numb' + newCrit;
+		document.getElementById('test2').innerHTML = 'norm numb' + newTot;*/
+
+		}
+		</script>
+	</body>
+</html>
