@@ -44,7 +44,7 @@
 		
 		document.getElementById('allHit').innerHTML = parseInt(totalHit)+1 ;
 		
-		document.getElementById('critPer').innerHTML = newCrit/newTot;
+		document.getElementById('critPer').innerHTML = Math.round((newCrit/newTot) * 100) / 100;
 
 		/*document.getElementById('test1').innerHTML = 'crit numb' + newCrit;
 		document.getElementById('test2').innerHTML = 'norm numb' + newTot;*/
@@ -60,7 +60,7 @@
 
 		document.getElementById('allHit').innerHTML = parseInt(totalHit)+1 ;
 
-		document.getElementById('critPer').innerHTML = newCrit/newTot;
+		document.getElementById('critPer').innerHTML = Math.round((newCrit/newTot) * 100) / 100;
 
 		/*document.getElementById('test1').innerHTML = 'crit numb' + newCrit;
 		document.getElementById('test2').innerHTML = 'norm numb' + newTot;*/
